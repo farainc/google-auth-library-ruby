@@ -1,10 +1,16 @@
 AllCops:
   Exclude:
-    - "spec/**/*"
     - "Rakefile"
-
+    - "integration/**/*"
+    - "rakelib/**/*"
+    - "spec/**/*"
+    - "test/**/*"
 Metrics/AbcSize:
   Max: 25
+Metrics/ClassLength:
+  Max: 200
+Metrics/ModuleLength:
+  Max: 110
 Metrics/BlockLength:
   Exclude:
     - "googleauth.gemspec"
