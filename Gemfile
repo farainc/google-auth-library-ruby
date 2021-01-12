@@ -19,7 +19,6 @@ group :development do
   gem "simplecov", "~> 0.9"
   gem "sinatra"
   gem "webmock", "~> 3.8"
-  gem "sprockets", "4.0.0.beta8"
 end
 
 platforms :jruby do
