@@ -32,4 +32,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency "multi_json", "~> 1.11"
   gem.add_dependency "os", ">= 0.9", "< 2.0"
   gem.add_dependency "signet", "~> 0.7"
+
+  gem.add_development_dependency "yard", "~> 0.9"
 end
