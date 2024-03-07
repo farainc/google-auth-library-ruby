@@ -171,7 +171,7 @@ module Google
             curve_name = CURVE_NAME_MAP[jwk[:crv]]
             raise KeySourceError, "Unsupported EC curve #{jwk[:crv]}" unless curve_name
             group = OpenSSL::PKey::EC::Group.new curve_name
-            bn = OpenSSL::BN.new ["04" + x_data.unpack1("H*") + y_data.unpack1("H*")].pack("H*"), 2
+            bn = OpenSSL::BN.new ["04" + x_data.unpack("H*").first + y_data.unpack("H*").first].pack("H*"), 2
             key = OpenSSL::PKey::EC.new curve_name
             key.public_key = OpenSSL::PKey::EC::Point.new group, bn
             key
